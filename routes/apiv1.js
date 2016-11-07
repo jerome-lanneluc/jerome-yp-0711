@@ -40,7 +40,8 @@ exports.getWeather = function(req, res) {
 router.get('/getWeather', exports.getWeather);
 
 function toCelcius(temp) {
-	return (temp - 32) * 5 / 9;
+	var c = (temp - 32) * 5 / 9;
+	return c.toFixed(2);
 }
 
 exports.getWeather2 = function(req, res) {
